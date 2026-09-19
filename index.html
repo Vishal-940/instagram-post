@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="instagram-post">
+      <!-- User Header -->
+      <div class="post-header">
+        <img src="image/20260623_100111.jpg" alt="User Avatar" class="avatar" />
+        <span class="username">_vishalswarnkar</span>
+      </div>
+
+      <!-- Post Image with Double-Click Heart Overlay -->
+      <div class="post-image-container" id="imageContainer">
+        <img
+          src="image/20260623_100111.jpg"
+          alt="Post content"
+          class="post-image"
+          id="postImage"
+        />
+        <div class="double-click-heart" id="heartAnimation">❤️</div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="post-actions">
+        <div class="left-actions">
+          <button class="action-btn" id="likeBtn" aria-label="Like">🤍</button>
+          <button class="action-btn" aria-label="Comment">💬</button>
+          <button class="action-btn" aria-label="Share">↗️</button>
+        </div>
+        <div class="right-actions">
+          <button class="action-btn" aria-label="Save">🔖</button>
+        </div>
+      </div>
+
+      <!-- Likes and Caption Section -->
+      <div class="post-details">
+        <div class="likes-count" id="likesCount">1,248 likes</div>
+        <div class="post-caption">
+          <span class="username">username_here</span>
+          Living my best engineering hostel life! Building cool projects and
+          coding away. 🚀
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

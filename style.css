@@ -1,0 +1,128 @@
+/* Instagram UI Color Variables */
+:root {
+  --ig-primary-background: #ffffff;
+  --ig-secondary-background: #efefef;
+  --ig-border-color: #dbdbdb;
+  --ig-primary-text: #262626;
+  --ig-secondary-text: #8e8e8e;
+  --ig-link-color: #0095f6;
+  --ig-like-red: #ed4956;
+  /* Official Instagram Gradient */
+  --ig-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* Container Sizing & Responsiveness */
+.instagram-post {
+  width: 100%;
+  max-width: 470px;
+  background-color: var(--ig-primary-background);
+  border: 1px solid var(--ig-border-color);
+  border-radius: 8px;
+  margin: 20px auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* User Header Layout */
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  flex-shrink: 0;
+  /* Optional: Gives the avatar a mini Instagram story gradient ring */
+  padding: 2px;
+  background: var(--ig-gradient);
+}
+
+.username {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ig-primary-text);
+}
+
+/* Image Container */
+.post-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--ig-secondary-background);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Double-Click Heart Animation Overlay */
+.double-click-heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 80px;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.double-click-heart.animate {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 1;
+}
+
+/* Action Buttons Layout */
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px 0 12px;
+}
+
+.left-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.1s ease;
+}
+
+.action-btn:active {
+  transform: scale(1.2);
+}
+
+/* Likes and Caption Section */
+.post-details {
+  padding: 0 14px 14px 14px;
+  font-size: 14px;
+  color: var(--ig-primary-text);
+}
+
+.likes-count {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.post-caption {
+  line-height: 1.4;
+}
+
+.post-caption .username {
+  font-weight: 600;
+  margin-right: 6px;
+}
